@@ -1,0 +1,94 @@
+.section-thead--icon
+  .icon
+    size(18px)
+.section-thead-checkbox,.section-body-checkbox
+  display none
+
+.section-thead-checkbox__input,.section-body-checkbox__input
+  position relative
+  size(18px)
+  background-color rgba(255, 255, 255, 0.1)
+  border-radius: 3px;
+  cursor pointer
+
+.section-body-checkbox__input.checked,.section-thead-checkbox__input.checked
+  &:after
+    content: "";
+    position: absolute;
+    left: 4.5px;
+    top: 9px;
+    width: 2px;
+    height: 2px;
+    box-shadow: #FDAB3E 2px 0px 0px, #FDAB3E -2px 0px 0px, #FDAB3E 4px 0px 0px, #FDAB3E 4px -2px 0px, #FDAB3E 4px -4px 0px, #FDAB3E 4px -6px 0px, #FDAB3E 4px -8px 0px, #FDAB3E 4px -10px 0px;
+    transform: rotate(45deg);
+    background: #FDAB3E
+.section-table
+  border-collapse separate
+  border-spacing 0 10px
+  width 100%
+  tr
+    th
+      font-family 'Open Sans 600',sans-serif
+      font-size 12px
+      color #fff
+      font-weight 600
+      line-height normal
+      padding 0
+      padding-bottom 15px
+      white-space nowrap
+      &:first-child
+        padding-right 20px
+        padding-left 15px
+      &:nth-child(2)
+        padding-right 31px
+      &:nth-child(n+3)
+        padding-right 80px
+      &:last-child
+        width 100%
+  tbody
+    tr
+      background-color #424B5B
+      td
+        padding 20px 0
+        white-space nowrap
+        line-height normal
+        color #fff
+        font-family 'Open Sans 400',sans-serif
+        font-size 13px
+        &:first-child
+          padding-left 15px
+        &:nth-child(n+3)
+          padding-right 65px
+.section-remove--pdd
+  padding-right 0
+
+.section-bottom-side--scroll
+  overflow-x scroll
+  border-top 1px solid rgba(153, 163, 181, 0.3)
+  padding 12px 0
+  margin-bottom 20px
+.section-bottom-side--scroll::-webkit-scrollbar
+  height: 10px;
+  border-radius: 10px;
+
+.section-bottom-side--scroll::-webkit-scrollbar-button
+  display: block;
+  size(10px)
+  background-color: transparent;
+
+.section-bottom-side--scroll::-webkit-scrollbar-thumb
+  border-radius: 10px;
+  outline: 1px solid #708090;
+  background-color: #fdab3e;
+  box-shadow: 0px 0px 10px rgba(253, 171, 62, 0.3);
+
+.section-bottom-side--scroll::-webkit-scrollbar-track
+  margin-right: 5px;
+.section-bottom-side--scroll::-webkit-scrollbar-track-piece
+  border-radius: 10px;
+  background: #424B5B
+.section-tbody--icon
+  .icon
+    size(20px)
+    cursor pointer
+

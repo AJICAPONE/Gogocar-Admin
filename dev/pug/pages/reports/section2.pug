@@ -1,0 +1,35 @@
+section.section2.col-xl-12.col-lg-12.col-md-12.col-sm-6
+    .filter-main.box-bg2
+        .section-top-side
+            .section-block--title Всего поездок: 900
+
+            .section-reports-right
+                .section-input-wrap.pr-0.desktop-display-none
+                    .section-select--input2.section-select--input__show
+                        span Пассажирские
+                        .section-select--popup__icon
+                            +icon('arrow-down-white')
+                        ul.section-select--popup__list.section-select--popup__list__show
+                            li.section-select--popup__item2.hover-text-color Пассажирские
+                            li.section-select--popup__item2.hover-text-color 2
+                            li.section-select--popup__item2.hover-text-color 3
+                .section-reports-mobile--wrap
+                    .section-reports-mobile.section-dotted-mobile2.mr-0
+                        +icon('sort')
+                    .section-upper-modal__calendar
+                        .col-xl-8.col-lg-8.col-md-8.col-sm-6.section-balance-filter--date.p-0
+                            label Укажите интервал:
+                            .section-balance-filter--date__wrap
+                                .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pl-0.pr-0
+                                    .section-balance-filter-date__wrap
+                                        input.input-main.calendar-filter-today.calendar-zone-height(type="text")
+                                        .section-balance-date--icon
+                                            +icon('calendar')
+
+                                .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pr-0
+                                    .section-balance-filter-date__wrap
+                                        input.input-main.calendar-filter.calendar-zone-height(type="text")
+                                        .section-balance-date--icon
+                                            +icon('calendar')
+        .section-bottom-side
+            // Таблицу или контент сюда

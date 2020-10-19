@@ -1,0 +1,35 @@
+section.section-1
+    .section-content--main__wrap.box-bg2.pb-0
+        .section-content--main
+            .section-top-side
+                .section-top-block--back
+                    .section-top-block--back__item
+                        +icon('arrow-left')
+                    .section-block--title Добавить операцию
+            form.section-support-form
+                .section-bottom-side
+                    .section-inputs--wrapper.row
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-6.section-input-wrap
+                            label Пользователь:
+                            input.input-main(type="text" placeholder="Пользователь...")
+                        .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap
+                            label Назначение платежа:
+                            .section-select--input2.section-select--input__show
+                                span Назначение платежа...
+                                .section-select--popup__icon
+                                    +icon('arrow-down-white')
+                                ul.section-select--popup__list.section-select--popup__list__show
+                                    li.section-select--popup__item2.hover-text-color Пассажирская
+                                    li.section-select--popup__item2.hover-text-color 2
+                                    li.section-select--popup__item2.hover-text-color 3
+
+                        .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap
+                            label Сумма:
+                            input.input-main(type="text" placeholder="Сумма...")
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-6.section-input-wrap
+                            label Комментарий:
+                            input.input-main(type="text" placeholder="Комментарий...")
+                .section-footer-side
+                    .section-buttons--wrap
+                        button.section-button--yellow.w-100px.mr-3(type="submit") Добавить
+                        .section-button--gray.w-100px Отменить

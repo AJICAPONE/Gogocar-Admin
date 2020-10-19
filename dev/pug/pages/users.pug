@@ -1,0 +1,171 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Пользователи (Основные)'
+    - var pageClass = 'index-page'
+
+block content
+    include users/section-1
+block script
+    script.
+        $(document).ready(function () {
+            // ======================= add tabs cars ==================//
+            $(function () {
+                $('.section-car-tabs--item').click(checkboxInput);
+
+                function checkboxInput() {
+                    var tabs = $(this).attr('data-car');
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $('.section-car-tab--list.' + tabs).addClass('active').siblings().removeClass('active');
+                }
+
+                var i = $(".section-car-tabs--item[data-car]").length + 1;
+
+                $('.section-car-tabs-added').click(tabsAdded);
+
+                function tabsAdded() {
+                    var count = i++;
+                    $('.section-car-tabs--list').append('<div class="section-car-tabs--item" data-car="user-auto-' + count + '">Авто №' + count + '</div>');
+                    $('.section-car-tab--inputs').append(
+                        '<div class="section-inputs--wrapper section-car-tab--list user-auto-' + count + ' row">' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Марка:</label>' +
+                        '<div class="section-select--input2 section-select--input__show">' +
+                        '<span>Введите марку машины</span>' +
+                        '<div class="section-select--popup__icon">' +
+                        '<svg class="icon icon-arrow-down-white "><use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down-white"></use></svg>' +
+                        '</div>' +
+                        '<ul class="section-select--popup__list section-select--popup__list__show">' +
+                        '<li class="section-select--popup__item2 hover-text-color">Любой1</li>' +
+                        '<li class="section-select--popup__item2 hover-text-color">Любой2</li>' +
+                        '<li class="section-select--popup__item2 hover-text-color">Любой3</li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Модель:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите модель машины"/>'+
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Кузов:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите кузов машины"/>' +
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Цвет:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите цвет машины"/>' +
+                        '</div>' +
+                        '</div>');
+                    $(".section-car-tabs--item:last-child").after($(".section-car-tabs-added"));
+
+                    var x = document.getElementsByClassName("section-car-tabs--item")
+                    if (x.length > 0)
+                        for (let item of x)
+                            item.addEventListener("click", checkboxInput);
+
+                }
+            });
+            // *********************************************************//
+
+            // ======================= add tabs cars ==================//
+            $(function () {
+                $('.section-car-tabs--item2').click(checkboxInputCargo);
+
+                function checkboxInputCargo() {
+                    var tabs = $(this).attr('data-car-cargo');
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $('.section-car-tab--list2.' + tabs).addClass('active').siblings().removeClass('active');
+                }
+
+                var i = $(".section-car-tabs--item2[data-car-cargo]").length + 1;
+
+                $('.section-car-tabs-added2').click(tabsAddedCargo);
+
+                function tabsAddedCargo() {
+                    var count = i++;
+                    $('.section-car-tabs--list2').append('<div class="section-car-tabs--item2" data-car-cargo="user-auto-cargo-' + count + '">Авто №' + count + '</div>');
+                    $('.section-car-tab--inputs2').append(
+                        '<div class="section-inputs--wrapper section-car-tab--list2 user-auto-cargo-' + count + ' row">' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Марка:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите марку машины"/>' +
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Модель:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите модель машины"/>' +
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Кузов:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите кузов машины"/>' +
+                        '</div>' +
+                        '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 section-input-wrap">' +
+                        '<label>Цвет:</label>' +
+                        '<input class="input-main" type="text" placeholder="Введите цвет машины"/>' +
+                        '</div>' +
+                        '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 section-input-wrap">' +
+                        '<label>Типы грузов:</label>' +
+                        '<div class="section-select--input2 section-select--input__show2">' +
+                        '<span class="section-bg-text--content"></span>' +
+                        '<div class="section-yellow-bg--wrap"></div>' +
+                        '<ul class="section-select--popup__list2">' +
+                        '<li class="section-select--popup__item3 hover-text-color">Обычный</li>' +
+                        '<li class="section-select--popup__item3 hover-text-color">Ценный</li>' +
+                        '<li class="section-select--popup__item3 hover-text-color">Габаритный</li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>');
+                    $(".section-car-tabs--item2:last-child").after($(".section-car-tabs-added2"));
+
+                    // ================= Choise Select Users ======================//
+                    $('.section-select--input__show2').on('click', function () {
+                        $(this).children('.section-select--popup__list2').slideToggle(200);
+                    });
+                    $('.section-select--popup__item3').click(function () {
+                        var get_user = $(this).text();
+                        //$('.section-select--input__show span').text(get_user);
+                        $(this).parents('.section-select--input__show2').children('span').text(get_user);
+                    });
+                    // *************************************************************** //
+
+                    function addItem() {
+                        var get_user = $(this).text();
+                        $('.section-bg-text--content').remove();
+                        $(this).parent().prevAll('.section-yellow-bg--wrap').append('<div class="section-yellow-bg--content2"><span>' + get_user + '</span><div class="section-yellow-bg--content__icon2"><svg class="icon icon-close "><use xlink:href="static/img/svg/symbol/sprite.svg#close"></use></svg></div></div>');
+                        $(this).off('click');
+                    }
+
+                    $('.section-select--popup__item3').on('click', addItem);
+
+
+                    function removeItem() {
+                        var get_text = $(this).parents('.section-yellow-bg--wrap').nextAll().children('.section-select--popup__item3');
+                        var get_click_text = $(this).prev().text();
+                        for (let item of get_text) {
+                            if ($(item).text() === get_click_text) {
+                                $(item).on('click', addItem);
+                            }
+                        }
+                        $(this).parent().remove();
+
+
+                    }
+
+                    $('.section-yellow-bg--wrap').on('click', '.section-yellow-bg--content__icon2', removeItem);
+
+                    $(document).click(function (e) {
+                        if (!$(e.target).closest(".section-select--popup__list2,.section-select--input__show2,.section-yellow-bg--content__icon2").length) {
+                            $('.section-select--popup__list2').slideUp(150);
+                        }
+                        e.stopPropagation();
+                    });
+
+
+
+                    var x = document.getElementsByClassName("section-car-tabs--item2")
+                    if (x.length > 0)
+                        for (let item of x)
+                            item.addEventListener("click", checkboxInputCargo);
+                }
+            });
+            // *********************************************************//
+        });

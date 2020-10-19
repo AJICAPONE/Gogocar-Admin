@@ -1,0 +1,7 @@
+mixin tabsLink(dataShow,text)
+	li.section-users--tab(data-tab-users= dataShow)&attributes(attributes)= text
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)

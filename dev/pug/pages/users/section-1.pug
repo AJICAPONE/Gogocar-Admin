@@ -1,0 +1,748 @@
+
+section.section1
+    .section-content--main__wrap.box-bg2.pb-0
+        .section-content--main
+            .section-top-side.section-overflow-top-side2
+                ul.section-users--tabs
+                    +tabsLink('users-main-param','Основные параметры')(class="active")
+                    +tabsLink('users-password','Паспорт')
+                    +tabsLink('users-drive-rules','Водительские права')
+                    +tabsLink('users-auto','Авто')
+                    +tabsLink('users-cargo-car','Грузовое авто')
+                    +tabsLink('users-balance','Баланс')
+                    +tabsLink('users-chat','Чат')
+
+            include users-tabs/user-main-tab
+            include users-tabs/user-password
+            include users-tabs/user-drive-rules
+            include users-tabs/user-auto
+            include users-tabs/user-auto-cargo
+            include users-tabs/user-balance
+            include users-tabs/user-chat
+
+section.section-balance--filter
+    .filter-main.box-bg2
+        include ../../modules/filters/filter-top
+        .section-bottom-side.filter-balance-bottom.row.m-0
+            .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pl-0
+                label Статус:
+                .section-select--input2.section-select--input__show
+                    span Не установлен
+                    .section-select--popup__icon
+                        +icon('arrow-down-white')
+                    ul.section-select--popup__list.section-select--popup__list__show
+                        li.section-select--popup__item2.hover-text-color Любой
+                        li.section-select--popup__item2.hover-text-color Любой2
+                        li.section-select--popup__item2.hover-text-color Любой3
+            .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pr-0
+                label Вид операции:
+                .section-select--input2.section-select--input__show
+                    span Не установлен
+                    .section-select--popup__icon
+                        +icon('arrow-down-white')
+                    ul.section-select--popup__list.section-select--popup__list__show
+                        li.section-select--popup__item2.hover-text-color Любой
+                        li.section-select--popup__item2.hover-text-color Любой2
+                        li.section-select--popup__item2.hover-text-color Любой3
+            .col-xl-4.col-lg-4.col-md-4.col-sm-6.section-input-wrap.pl-0
+                label Интервал:
+                .section-select--input2.section-select--input__show.section-select-calendar
+                    span Не установлен
+                    .section-select--popup__icon
+                        +icon('arrow-down-white')
+                    ul.section-select--popup__list.section-select--popup__list__show
+                        li.section-select--popup__item2.hover-text-color(data-calendar-selector="calendar-selector-day") День
+                        li.section-select--popup__item2.hover-text-color(data-calendar-selector="calendar-selector-month") Месяц
+                        li.section-select--popup__item2.hover-text-color(data-calendar-selector="calendar-selector-year") Год
+            .col-xl-8.col-lg-8.col-md-8.col-sm-6.section-balance-filter--date.p-0
+                label Дата:
+                .section-balance-filter--date__wrap
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pl-0
+                        .section-balance-filter-date__wrap
+                            input.input-main.calendar-filter-today.calendar-zone-height.calendar-selector-data(type="text")
+                            .section-balance-date--icon
+                                +icon('calendar')
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-6.section-input-wrap.pr-0
+                        .section-balance-filter-date__wrap
+                            input.input-main.calendar-filter.calendar-zone-height.calendar-selector-data(type="text")
+                            .section-balance-date--icon
+                                +icon('calendar')
+section.section-operation.section-content-main--table
+    .section-content--main__wrap.box-bg2
+        .section-content--main
+            .section-top-side
+                .section-block--title Операции
+            .section-bottom-side--scroll
+                table.section-table
+                    thead
+                        tr
+                            th
+                                .section-thead-checkbox__input#check-all
+                                    input.section-thead-checkbox(type="checkbox")
+                            th.section-thead--icon
+                                +icon('settings')
+                            th Отклонить
+                            th Пользователь
+                            th Сумма
+                            th Дата
+                            th Назначение платежа
+                            th Вид операции:
+                            th Статус
+                            th Комментарий
+                            th Метод
+                    tbody.section-data-container
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td one
+                            td 10 000 UZS
+                            td 20.07.2020 09:30
+                            td Facilisis etiam.
+                            td Расход
+                            td Pending
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+
+                        tr.section-data-container--item
+                            td
+                                .section-body-checkbox__input
+                                    input.section-body-checkbox(type="checkbox")
+                            td.section-tbody--icon.section-tbody--show__popup
+                                +icon('burger')
+                                .section-tbody--modal--table
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            td
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                            td Владимир Владимирович Пятницкий
+                            td 100 000 UZS
+                            td 11.07.2020 14:27
+                            td Amet sed.
+                            td Расход
+                            td Complete
+                            td A ut diam risus dolor, pellentesque semper. Proin.
+                            td paypal
+            .section-bottom-pagination--wrap
+                .section-bottom--delete.gogocar-arrow-button
+                    +icon('delete')
+                .section-bottom-pagination
+// .section-content-main--table
+section.section3.section-content-main-mobile--table
+    .section-content--main-mobile__wrap
+        .section-content--main.box-bg2.pb-20px
+            .section-top-side.box-bg-mobile2
+                .section-block--title Пользователи
+                .filter-side--right
+                    .section-top-added.gogocar-arrow-button
+                        +icon('plus')
+            .section-bottom-side--mobile__list
+                // Элемент мобильной таблицы
+                .section-bottom-side--mobile__item--wrap.section-data-container--item
+                    .section-bottom-side--mobile__item
+                        .section-bottom-side--mobile__item--name one
+                        .section-bottom-side--mobile__item--attr
+                            .section-tbody--show__popup.section-top-added.gogocar-arrow-button
+                                +icon('dots')
+                                .section-tbody--modal--table__mobile
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            .section-arrow-mobile-table.section-top-added.gogocar-arrow-button
+                                +icon('arrow-down-mobile')
+                    ul.section-bottom-side--mobile__item--content
+                        li.section-mobile-table--item(style="align-items:center;")
+                            .section-mobile-table--item__left Отклонить:
+                            .section-mobile-table--item__right
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Пользователь:
+                            .section-mobile-table--item__right one
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Сумма:
+                            .section-mobile-table--item__right 10 000 UZS
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Дата:
+                            .section-mobile-table--item__right 20.07.2020 09:30
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Назначение платежа:
+                            .section-mobile-table--item__right Facilisis etiam.
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Вид операции:
+                            .section-mobile-table--item__right Расход
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Статус:
+                            .section-mobile-table--item__right Pending
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Комментарий: #[span A ut diam risus dolor, pellentesque semper. Proin.]
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Метод:
+                            .section-mobile-table--item__right PayPal
+
+
+
+                // Элемент мобильной таблицы
+                .section-bottom-side--mobile__item--wrap.section-data-container--item
+                    .section-bottom-side--mobile__item
+                        .section-bottom-side--mobile__item--name Бек
+                        .section-bottom-side--mobile__item--attr
+                            .section-tbody--show__popup.section-top-added.gogocar-arrow-button
+                                +icon('dots')
+                                .section-tbody--modal--table__mobile
+                                    .section-tbody--modal--item
+                                        +icon('paper')
+                                        span Просмотр
+                                    .section-tbody--modal--item
+                                        +icon('pen')
+                                        span Изменить
+                                    .section-tbody--modal--item
+                                        +icon('delete-red')
+                                        span Удалить
+                            .section-arrow-mobile-table.section-top-added.gogocar-arrow-button
+                                +icon('arrow-down-mobile')
+                    ul.section-bottom-side--mobile__item--content
+                        li.section-mobile-table--item(style="align-items:center;")
+                            .section-mobile-table--item__left Отклонить:
+                            .section-mobile-table--item__right
+                                .section-body-checkbox__input__off
+                                    input.section-body-checkbox__off(type="checkbox")
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Пользователь:
+                            .section-mobile-table--item__right one
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Сумма:
+                            .section-mobile-table--item__right 10 000 UZS
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Дата:
+                            .section-mobile-table--item__right 20.07.2020 09:30
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Назначение платежа:
+                            .section-mobile-table--item__right Facilisis etiam.
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Вид операции:
+                            .section-mobile-table--item__right Расход
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Статус:
+                            .section-mobile-table--item__right Pending
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Комментарий: #[span A ut diam risus dolor, pellentesque semper. Proin.]
+                        li.section-mobile-table--item
+                            .section-mobile-table--item__left Метод:
+                            .section-mobile-table--item__right PayPal
+
+
+            .section-bottom-pagination--wrap
+                //.section-bottom--delete.gogocar-arrow-button
+                //    +icon('delete')
+                .section-bottom-pagination
+section.section-chat
+    .col-xl-12.col-lg-12.p-0.personal-chat-container.personal-fixed-chat--container
+        .chat-container-block
+            .chat-container-header
+                .gogocar-gray-icons.gogocar-go-back.gogocar-go-back-chat--mobile
+                    +icon('arrow-right')
+                .chat-container-header--img(style="background-image:url('/static/img/content/drivers-avatar/driver1.png')")
+                .chat-container-header--info__option
+                    .chat-container-header--info
+                        .chat-container-header--name Матвей Федотов
+                        .chat-container-header--desc Fedotov@mail.ru
+                    .chat-container-header--option--left--wrap
+                        .chat-container-header--option-delete__panel
+                            .chat-container-header--option-delete--delete.gogocar-gray-icons(data-toggle="modal" data-target="#popup-del-msg")
+                                +icon('delete-red')
+                            .chat-delete-out-msg
+                                .chat-text-delete__message Удалить сообщения?
+                                .chat-container-option--message--wrap
+                                    .chat-container-option--message--item.chat-choise-delet-msg
+                                        +icon('delete')
+                                        span Удалить
+                                    .chat-container-option--message--item--cancel Отмена
+                            .chat-container-header--option-delete--back.gogocar-gray-icons
+                                +icon('close')
+                        .chat-container-header--option.chat-container-option-dot.gogocar-gray-icons
+                            +icon('dots')
+                        .chat-container-header--delete__message
+                            .chat-container-header--delete__message--item(data-toggle="modal" data-target="#popup-choise-text")
+                                +icon('question2')
+                                span Выбрать ответ
+                            .chat-container-header--delete__message--item
+                                +icon('delete-red')
+                                span Закрыть запрос
+
+            .chat-container-main
+                .chat-container-main--info
+                    .chat-container-main-last--date 6 Июня
+                    .chat-container-people-messages.chat-container-message-out
+                        .chat-container-message--wrapper
+                            .chat-container--message--status
+                                +icon('looked')
+                            .chat-container-message--wrap
+                                .chat-container-message--file-type
+                                    .chat-container-message--format
+                                        +icon('chat-png')
+                                    .chat-container-message--format-text
+                                        span.chat-container-message--format-name Фото.png
+                                        span.chat-container-message--format-time 14:02
+                                a.chat-container-message--format-download.gogocar-gray-icons(href="/" download)
+                                    +icon('download')
+                            .chat-container-message--wrap--delete__check--wrap
+                                .chat-container-message--wrap--delete__check
+
+
+                    .chat-container-people-messages.chat-container-message-out
+                        .chat-container-message--wrapper
+                            .chat-container--message--status
+                                +icon('looked')
+                            .chat-container-message--wrap
+                                .chat-container-message--info__message
+                                    .chat-container-message--date__name
+                                        span 14:02
+                                        .chat-container-message--name--wrap
+                                            .chat-container-message--name--button
+                                                +icon('arrow-right')
+
+                                            .chat-container-option--message.chat-show-message-out.chat-show-message-out--mobile
+                                                .chat-container-option--message--wrap
+                                                    .chat-container-option--message--wrap--buttons
+                                                        .chat-container-option--message--item.chat-change-message
+                                                            +icon('pen')
+                                                            span Изменить
+                                                        .chat-container-option--message--item.chat-delete-message
+                                                            +icon('delete-red')
+                                                            span Удалить
+                                                    .chat-container-option--message--item--cancel Отмена
+
+
+                                            .chat-container-message--name Татьяна Гусева
+                                    p.chat-container--message In orci pulvinar metus erat.
+                                .chat-container-message--img(style="background-image:url('/static/img/content/drivers-avatar/driver2.png')")
+                            .chat-container-message--wrap--delete__check--wrap
+                                .chat-container-message--wrap--delete__check
+                    .chat-container-people-messages.chat-container-message-in
+                        .chat-container-message--wrapper
+                            .chat-container-message--wrap
+                                .chat-container-message--info__message
+                                    .chat-container-message--date__name
+                                        span 14:02
+                                        .chat-container-message--name--wrap
+                                            .chat-container-message--name--button
+                                                +icon('arrow-right')
+                                            .chat-container-option--message.chat-show-message-in.chat-show-message-in--mobile
+                                                .chat-container-option--message--wrap
+                                                    .chat-container-option--message--item.chat-answer-message
+                                                        +icon('share')
+                                                        span Ответить
+                                                    .chat-container-option--message--item--cancel Отмена
+
+                                            .chat-container-message--name Матвей Федотов
+                                    p.chat-container--message In orci pulvinar metus erat.In orci pulvinar metus erat.
+                                .chat-container-message--img(style="background-image:url('/static/img/content/drivers-avatar/driver1.png')")
+                    .chat-container-people-messages.chat-container-message-out
+                        .chat-container-message--wrapper
+                            .chat-container--message--status
+                                +icon('not-looked')
+                            .chat-container-message--wrap
+                                .chat-container-message--info__message
+                                    .chat-container-message--date__name
+                                        span 14:02
+                                        .chat-container-message--name--wrap
+                                            .chat-container-message--name--button
+                                                +icon('arrow-right')
+                                            .chat-container-option--message.chat-show-message-out.chat-show-message-out--mobile
+                                                .chat-container-option--message--wrap
+                                                    .chat-container-option--message--wrap--buttons
+                                                        .chat-container-option--message--item.chat-change-message
+                                                            +icon('pen')
+                                                            span Изменить
+                                                        .chat-container-option--message--item.chat-delete-message
+                                                            +icon('delete-red')
+                                                            span Удалить
+                                                    .chat-container-option--message--item--cancel Отмена
+                                            .chat-container-message--name Татьяна Гусева
+                                    p.chat-container--message In orci pulvinar metus erat.
+                                .chat-container-message--img(style="background-image:url('/static/img/content/drivers-avatar/driver2.png')")
+                            .chat-container-message--wrap--delete__check--wrap
+                                .chat-container-message--wrap--delete__check
+                    .chat-container-people-messages.chat-container-message-in
+                        .chat-container-message--wrapper
+                            .chat-container-message--wrap
+                                .chat-container-message--file-type
+                                    .chat-container-message--format
+                                        +icon('chat-png')
+                                    .chat-container-message--format-text
+                                        span.chat-container-message--format-name Фото.png
+                                        span.chat-container-message--format-time 14:02
+                                a.chat-container-message--format-download.gogocar-gray-icons(href="/" download)
+                                    +icon('download')
+                    .chat-container-people-messages.chat-container-message-in
+                        .chat-container-message--wrapper
+                            .chat-container-message--wrap
+                                .chat-container-message--info__message
+                                    .chat-container-message--date__name
+                                        span 14:02
+                                        .chat-container-message--name--wrap
+                                            .chat-container-message--name--button
+                                                +icon('arrow-right')
+                                            .chat-container-option--message.chat-show-message-in.chat-show-message-in--mobile
+                                                .chat-container-option--message--wrap
+                                                    .chat-container-option--message--item.chat-answer-message
+                                                        +icon('share')
+                                                        span Ответить
+                                                    .chat-container-option--message--item--cancel Отмена
+                                            .chat-container-message--name Матвей Федотов
+                                    p.chat-container--message In orci pulvinar metus erat.In orci pulvinar metus erat.
+                                .chat-container-message--img(style="background-image:url('/static/img/content/drivers-avatar/driver1.png')")
+            .chat-container-footer
+                .chat-container-footer-wrap--inputs
+                    .chat-container--edit--message#chat-edit-msg
+                        .chat-container--edit--wrap
+                            .chat-container--edit--title Редактировать
+                            .chat-container--edit--text#chat-edit-text Тут будет проверочный текст
+                        .chat-container--edit--close#chat-edit-close
+                            +icon('close')
+                    .chat-container--edit--message--file--add
+                        .personal-appear--file--wrap.row#chat-file-add
+                        .personal-loaded--file__icon
+                            +icon('close')
+
+                    .chat-container-footer--file__input
+                        +icon('skrepka')
+                        input.chat-container-footer--input__file(type="file" multiple)
+                    .chat-container-footer--text__input
+                        .chat-container-footer--input__text#chat-get-text(contenteditable="true" role="textbox" aria-multiline="true")
+                        .chat-container-footer--placeholder Cообщение...
+                    .chat-container-footer--smiles
+                        +icon('smile')
+                    .chat-container-footer--emoji--list.row
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji1.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji2.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji3.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji4.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji5.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji6.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji7.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji8.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji9.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji10.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji11.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji12.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji13.png" alt="emoji")
+                        img.cab-chat-emoji(src="static/img/content/emoji/emoji14.png" alt="emoji")
+
+
+                    button.chat-container-footer--submit
+                        +icon('send')
+
+
+
