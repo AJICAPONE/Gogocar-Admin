@@ -42,6 +42,22 @@
                 <li class="nav-sidebar-menu--item">
                   <div class="nav-sidebar-menu--item--wrap">
                     <div class="nav-sidebar-menu--item__left-side">
+                      <svg class="icon icon-money-bag ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#money-bag"></use>
+                      </svg>
+                      <div class="nav-sidebar-menu--item__name">Стоимости</div>
+                    </div>
+                    <div class="nav-sidebar-menu--item__right-side">
+                      <svg class="icon icon-arrow-down-white ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down-white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="nav-sidebar-menu--list--depth2"><a class="nav-sidebar-menu--item--depth2" href="/">Стоимость по умолчанию</a><a class="nav-sidebar-menu--item--depth2" href="/">Стоимость за 1 км</a></ul>
+                </li>
+                <li class="nav-sidebar-menu--item">
+                  <div class="nav-sidebar-menu--item--wrap">
+                    <div class="nav-sidebar-menu--item__left-side">
                       <svg class="icon icon-support ">
                         <use xlink:href="static/img/svg/symbol/sprite.svg#support"></use>
                       </svg>
@@ -284,6 +300,24 @@
             </div>
           </header>
           <div class="content">
+            <section class="breadcrumbs">
+              <div class="breadcrumbs--list">
+                <div class="breadcrumb--item"><a href="/">
+                    <svg class="icon icon-home2 ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#home2"></use>
+                    </svg></a>
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div><a class="breadcrumb--item" href="/">Стоимости
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg></a><a class="breadcrumb--item" href="/">Стоимость по умолчанию
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                  </svg></a>
+              </div>
+            </section>
             <section class="section-1">
               <div class="section-content--main__wrap box-bg2 pb-0">
                 <div class="section-content--main">
@@ -569,6 +603,7 @@
           </form>
         </div>
       </div>
+      <div class="mobile-bg-popup--show"></div>
     </div>
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/libs.min.js"></script>

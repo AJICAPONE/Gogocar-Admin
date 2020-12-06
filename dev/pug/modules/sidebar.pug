@@ -22,6 +22,17 @@ sidebar.col-xl-2_5.col-lg-3.col-md-4.col-sm-10.left-side.box-bg
                 li.nav-sidebar-menu--item
                     .nav-sidebar-menu--item--wrap
                         .nav-sidebar-menu--item__left-side
+                            +icon('money-bag')
+                            .nav-sidebar-menu--item__name Стоимости
+                        .nav-sidebar-menu--item__right-side
+                            +icon('arrow-down-white')
+                    ul.nav-sidebar-menu--list--depth2
+                        a.nav-sidebar-menu--item--depth2(href="/") Стоимость по умолчанию
+                        a.nav-sidebar-menu--item--depth2(href="/") Стоимость за 1 км
+
+                li.nav-sidebar-menu--item
+                    .nav-sidebar-menu--item--wrap
+                        .nav-sidebar-menu--item__left-side
                             +icon('support')
                             .nav-sidebar-menu--item__name Поддержка
                         .nav-sidebar-menu--item__right-side

@@ -171,6 +171,55 @@
   &:last-child
     &:after
       display none
+.left-side,.right-side
+  transition .4s ease
+  will-change transform
+.left-side.active
+  transform translateX(-20vw)
 
+.right-side.active
+  flex: 0 0 100%;
+  max-width: 100%;
+  transform: translateX(-20vw);
+.section-bottom-side--scroll::-webkit-scrollbar-thumb,.content::-webkit-scrollbar-thumb,.chat-container-main--info::-webkit-scrollbar-thumb
+  outline none
+.breadcrumbs--list
+  display flex
+  align-items center
+  overflow-x auto
 
+.breadcrumb--item
+  display flex
+  align-items center
+  font-family 'Montserrat 500', sans-serif
+  font-size 13px
+  color #A9ACB0
+  white-space nowrap
+  &:hover
+    text-decoration none
+    color #FDAB3E
+    .icon-home2
+      fill #FDAB3E
+  .icon
+    size(8px)
+    fill #A9ACB0
+    margin 0 11px
+  .icon-home2
+    size(20px)
+    margin 0
 
+  &:last-child
+    .icon
+      display none
+.section-down-menu--wrap
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  flex-wrap wrap
+.section-down-menu--blocks
+  margin 0 -15px
+  label
+    margin-left 15px
+.section-down-menu--item
+  margin-bottom 20px

@@ -1,6 +1,10 @@
 @media screen and (max-width: 1199px)
   .section-user-flex--item
     margin-bottom 20px
+  .left-side.active
+    transform translateX(-25vw)
+  .right-side.active
+    transform translateX(-25vw)
 @media screen and (max-width: 991px)
   .pr-50
     padding-right 30px
@@ -10,6 +14,10 @@
     margin-right 0
   .content::-webkit-scrollbar
     display none
+  .left-side.active
+    transform translateX(-33.333333vw)
+  .right-side.active
+    transform translateX(-33.333333vw)
 
 @media screen and (max-width: 767px)
   .left-side
@@ -41,17 +49,17 @@
       z-index 89
       will-change transform
       transition .5s ease
-  .left-and-right-side.active
-    &:before
-      content ''
-      position fixed !important
-      opacity 1
-      top 0
-      bottom 0
-      right 0
-      left 0
-      background-color rgba(41, 47, 57, 0.7)
-      z-index 85
+  //.left-and-right-side.active
+  //  &:after
+  //    content ''
+  //    position fixed !important
+  //    opacity 1
+  //    top 0
+  //    bottom 0
+  //    right 0
+  //    left 0
+  //    background-color rgba(41, 47, 57, 0.7)
+  //    z-index 85
   .header-right--message
     display none
   .header-nav-left--back
@@ -424,7 +432,8 @@
       width 100%
       li:last-child
         margin-right 0
-
+  .breadcrumbs--list
+    padding 0 15px
 
 
 
