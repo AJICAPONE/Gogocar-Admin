@@ -4,6 +4,7 @@
   padding 35px 30px
   display flex
   align-items center
+  transition .4s ease
 .nav-sidebar--sections
   overflow-y scroll
   height calc(100vh - 130px)
@@ -17,6 +18,8 @@
   border-radius 10px
   box-shadow: 0 4px 14px 1px #fdab3e52;
   margin-right 15px
+  min-width 60px
+
 
 .nav-sidebar--admin__name
   font-size 18px
@@ -33,7 +36,7 @@
   align-items center
   justify-content space-between
   padding: 10px 15px 10px 30px;
-
+  transition .4s ease
 .nav-sidebar-menu--item
   cursor pointer
   //margin-bottom 10px
@@ -50,6 +53,7 @@
   .icon
     margin-right 10px
     size(21px)
+    transition .4s ease
 
 .nav-sidebar-menu--item__name
   color rgba(255, 255, 255, 0.7)
@@ -63,8 +67,10 @@
   display flex
   flex-direction column
   padding-left 30px
+  padding-bottom 15px
 
 .nav-sidebar-menu--item--depth2
+  display block
   color #fff
   font-family 'Oswald 400',sans-serif
   font-size 13px
@@ -72,7 +78,7 @@
   transition all linear .2s
 
   &:last-child
-    margin-bottom 15px
+    margin-bottom 0
   &:hover
     color #FDAB3E
     text-decoration none

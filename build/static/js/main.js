@@ -1090,8 +1090,8 @@ $(document).ready(function () {
         $(this).parents('.section-bottom-side--mobile__item').next().slideToggle(200).css('display','flex');
     });
     $('.header-nav-left--back').click(function () {
-       $('.left-side').toggleClass('active');
-       $('.right-side').toggleClass('active');
+       $('.left-side').toggleClass('active-desctop');
+       $('.right-side').toggleClass('active-desctop');
     });
 
 });

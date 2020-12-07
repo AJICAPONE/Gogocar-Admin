@@ -1,10 +1,16 @@
+@media screen and (max-width: 1366px)
+  .nav-sidebar--admin__img
+    size(50px)
+    min-width 50px
 @media screen and (max-width: 1199px)
   .section-user-flex--item
     margin-bottom 20px
-  .left-side.active
-    transform translateX(-25vw)
-  .right-side.active
-    transform translateX(-25vw)
+  .left-side.active-desctop
+    flex: 0 0 8%;
+    max-width: 8%;
+  .right-side.active-desctop
+    flex: 0 0 92%;
+    max-width: 92%;
 @media screen and (max-width: 991px)
   .pr-50
     padding-right 30px
@@ -14,10 +20,12 @@
     margin-right 0
   .content::-webkit-scrollbar
     display none
-  .left-side.active
-    transform translateX(-33.333333vw)
-  .right-side.active
-    transform translateX(-33.333333vw)
+  .left-side.active-desctop
+    flex: 0 0 10%;
+    max-width: 10%;
+  .right-side.active-desctop
+    flex: 0 0 90%;
+    max-width: 90%;
 
 @media screen and (max-width: 767px)
   .left-side
